@@ -2,13 +2,13 @@ package com.unessesaryguide.artisticexpression;
 
 import com.unessesaryguide.artisticexpression.item.GeneralItems;
 import com.mojang.logging.LogUtils;
+import com.unessesaryguide.artisticexpression.loot.ModLootModifiers;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.network.chat.Component;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
-import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.minecraft.core.registries.Registries;
@@ -19,7 +19,6 @@ public class ArtisticExpression {
     public static final String MODID = "artisticexpression";
     public static final Logger LOGGER = LogUtils.getLogger();
 
-    // Creative Tab
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
         DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
 
@@ -37,7 +36,8 @@ public class ArtisticExpression {
                 }).build());
 
     public ArtisticExpression(IEventBus modEventBus) {
-        GeneralItems.ITEMS.register(modEventBus);
+        GeneralItems.register(modEventBus);
+        ModLootModifiers.LOOT_MODIFIERS.register(modEventBus);
         CREATIVE_MODE_TABS.register(modEventBus);
     }
 }

@@ -25,29 +25,28 @@ public class ModLanguageProvider extends LanguageProvider {
         // Creative tab
         add("itemGroup.artisticexpression", "Artistic Expression");
 
-        // Add colored variants by passing the base name and item map
+        // Looped color variants
         addColoredItems("shaved_fleece", GeneralItems.SHAVED_FLEECE);
     }
 
-    /**
-     * Loops through all DyeColors, looks up the item in the map,
-     * and adds "[Color] [Formatted Name]" as the translation.
-     * Logs a warning if a color is missing from the map.
-     */
     private <T extends Item> void addColoredItems(
         String baseName,
         Map<DyeColor, DeferredItem<T>> itemMap) {
+
+        LOGGER.info("[Artistic Expression] Adding lang entries for '{}'", baseName);
 
         for (DyeColor color : DyeColor.values()) {
             DeferredItem<T> item = itemMap.get(color);
 
             if (item == null) {
-                LOGGER.warn("[Artistic Expression] Missing item for color '{}' with base name '{}'",
+                LOGGER.warn("[Artistic Expression] Missing lang for color '{}' with base name '{}'",
                     color.getName(), baseName);
                 continue;
             }
 
-            add(item.get(), formatName(color.getName()) + " " + formatName(baseName));
+            // Use translation key directly instead of item.get()
+            String translationKey = "item." + ArtisticExpression.MODID + "." + color.getName() + "_" + baseName;
+            add(translationKey, formatName(color.getName()) + " " + formatName(baseName));
         }
     }
 

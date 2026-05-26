@@ -1,0 +1,4 @@
+/time set noon
+/gamerule doDaylightCycle false
+/kill @e[name="sheep"]
+/kill @e[name="Sheep"]
