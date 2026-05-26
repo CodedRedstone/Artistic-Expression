@@ -26,6 +26,11 @@ public class GeneralItems {
         }
     }
 
+    public static final DeferredItem<Item> THREAD = ITEMS.registerSimpleItem(
+        "thread",
+        new Item.Properties()
+    );
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

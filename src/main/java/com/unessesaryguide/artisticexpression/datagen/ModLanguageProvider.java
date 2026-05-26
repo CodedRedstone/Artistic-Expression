@@ -25,6 +25,8 @@ public class ModLanguageProvider extends LanguageProvider {
         // Creative tab
         add("itemGroup.artisticexpression", "Artistic Expression");
 
+        add(GeneralItems.THREAD.get(), "Thread");
+
         // Looped color variants
         addColoredItems("shaved_fleece", GeneralItems.SHAVED_FLEECE);
     }

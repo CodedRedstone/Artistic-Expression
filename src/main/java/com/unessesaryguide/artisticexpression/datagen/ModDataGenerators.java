@@ -8,6 +8,8 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 
+import java.util.concurrent.CompletableFuture;
+
 @EventBusSubscriber(modid = ArtisticExpression.MODID)
 public class ModDataGenerators {
 
@@ -25,5 +27,9 @@ public class ModDataGenerators {
 
         generator.addProvider(event.includeServer(),
             new ModRecipeProvider(output, event.getLookupProvider()));
+
+        generator.addProvider(event.includeServer(),
+            new ModItemTagProvider(output, event.getLookupProvider(),
+                CompletableFuture.completedFuture(null)));
     }
 }

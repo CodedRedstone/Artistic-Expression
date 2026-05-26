@@ -27,10 +27,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         addColoredItemModels("shaved_fleece", GeneralItems.SHAVED_FLEECE);
-
-        // Future additions:
-        // addColoredItemModels("silk", TextileBlocks.SILK);
-        // addColoredItemModels("terracotta_bricks", TerracottaBlocks.TERRACOTTA_BRICKS);
+        basicItem(GeneralItems.THREAD.get());
     }
 
     /**

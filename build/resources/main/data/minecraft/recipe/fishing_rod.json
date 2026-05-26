@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "tag": "artisticexpression:strand"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "  S",
+    " S#",
+    "S #"
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:bow"
+  }
+}

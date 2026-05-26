@@ -7,6 +7,8 @@ import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Items;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
@@ -44,7 +46,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         for (DyeColor color : DyeColor.values()) {
             var fleeceEntry = GeneralItems.SHAVED_FLEECE.get(color);
             var woolItem = WOOL_BY_COLOR.get(color);
-            System.out.println("Processing: " + color.getName() + " fleece=" + fleeceEntry + " wool=" + woolItem);
             if (fleeceEntry == null || woolItem == null) continue;
 
             ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, woolItem)
@@ -54,5 +55,44 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_fleece", has(fleeceEntry.get()))
                 .save(output, ArtisticExpression.MODID + ":fleece_to_" + color.getName() + "_wool");
         }
+
+        // Bow - uses minecraft:bow as the key, overriding vanilla
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, Items.BOW)
+            .pattern(" S#")
+            .pattern("S #")
+            .pattern(" S#")
+            .define('#', ModItemTagProvider.STRAND)
+            .define('S', Items.STICK)
+            .unlockedBy("has_strand", has(ModItemTagProvider.STRAND))
+            .save(output, ResourceLocation.fromNamespaceAndPath("minecraft", "bow"));
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, Items.BOW)
+            .pattern("  S")
+            .pattern(" S#")
+            .pattern("S #")
+            .define('#', ModItemTagProvider.STRAND)
+            .define('S', Items.STICK)
+            .unlockedBy("has_strand", has(ModItemTagProvider.STRAND))
+            .save(output, ResourceLocation.fromNamespaceAndPath("minecraft", "fishing_rod"));
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, Items.LOOM)
+            .pattern("SS")
+            .pattern("##")
+            .define('S', ModItemTagProvider.STRAND)
+            .define('#', ItemTags.PLANKS)
+            .unlockedBy("has_strand", has(ModItemTagProvider.STRAND))
+            .save(output, ResourceLocation.fromNamespaceAndPath("minecraft", "loom"));
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, Items.LOOM)
+            .pattern("S")
+            .pattern("#")
+            .define('S', ModItemTagProvider.STRAND)
+            .define('#', ModItemTagProvider.WAX)
+            .unlockedBy("has_strand", has(ModItemTagProvider.STRAND))
+            .save(output, ResourceLocation.fromNamespaceAndPath("minecraft", "candle"));
+
     }
 }

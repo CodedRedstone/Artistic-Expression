@@ -1,4 +1,4 @@
-// 1.21.1	2026-05-26T10:40:32.0544977	Item Models: artisticexpression
+// 1.21.1	2026-05-26T20:16:57.3179386	Item Models: artisticexpression
 71528f0fd7a5f3ed874377a466511f7e8b9444b9 assets/artisticexpression/models/item/black_shaved_fleece.json
 8d092ad08605e3d4382704c4f0c6472724d8e72f assets/artisticexpression/models/item/brown_shaved_fleece.json
 8a163062b8578c154a8edb695f64ef947a89ac02 assets/artisticexpression/models/item/cyan_shaved_fleece.json
@@ -7,4 +7,5 @@
 1fdb2da4f45dc459b6dab341f050f8c570134425 assets/artisticexpression/models/item/lime_shaved_fleece.json
 265b369a92143e1ff24f0d78d8f9c74d1834227a assets/artisticexpression/models/item/orange_shaved_fleece.json
 4f045aecc1b6bb9944dc8b844ca72618e6e3183a assets/artisticexpression/models/item/red_shaved_fleece.json
+2610243f415bba936876f32f71b3e92ebf440542 assets/artisticexpression/models/item/thread.json
 9a343128098b19c1f49c7c18a2996cb0cee29cb9 assets/artisticexpression/models/item/yellow_shaved_fleece.json

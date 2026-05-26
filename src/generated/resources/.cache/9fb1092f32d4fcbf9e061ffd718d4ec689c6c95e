@@ -1,4 +1,4 @@
-// 1.21.1	2026-05-26T14:35:51.4505412	Recipes
+// 1.21.1	2026-05-26T20:39:16.2283394	Recipes
 b3643fe4f6c9ba7612b769e20c689f22cd05f0ce data/artisticexpression/advancement/recipes/building_blocks/fleece_to_black_wool.json
 6f3eb2da9aed4b54cdaab0a0b829cd977c5553a0 data/artisticexpression/advancement/recipes/building_blocks/fleece_to_blue_wool.json
 6594ea913e164551ecbb1565373a6b9b31f86f07 data/artisticexpression/advancement/recipes/building_blocks/fleece_to_brown_wool.json
@@ -31,3 +31,11 @@ c7457a44c0c5dc2ee1417f4e158cb85f1ce4cf16 data/artisticexpression/recipe/fleece_t
 bad7710bdac388c036b80ec547da18d30d006354 data/artisticexpression/recipe/fleece_to_red_wool.json
 595ccfacd44ad4a7674a4a07d14de165275a5370 data/artisticexpression/recipe/fleece_to_white_wool.json
 6124ddc3f5d194a5cd82174b81d0205596f2e2aa data/artisticexpression/recipe/fleece_to_yellow_wool.json
+23dbb3a288a19d82a269ce42b53d41f909a31afa data/minecraft/advancement/recipes/combat/bow.json
+9559ce89f10e80f77d34a447c5383f99fac0b863 data/minecraft/advancement/recipes/decorations/candle.json
+9759e11c32f477da83876da22fe9c71f622c5464 data/minecraft/advancement/recipes/decorations/loom.json
+6eb0c2c2b85d534d4722528672f435f538cf26d3 data/minecraft/advancement/recipes/tools/fishing_rod.json
+f63a2f53e9f62a6f8dd45f3ee1adacea6c01f4a0 data/minecraft/recipe/bow.json
+452f567ba427d8059477059f3ab519437e3eff1a data/minecraft/recipe/candle.json
+a2b3ab0cf7f31e55d1e4b9d49aa73062a732a115 data/minecraft/recipe/fishing_rod.json
+66c27710417304b00248a8857ff501e92da0256f data/minecraft/recipe/loom.json
