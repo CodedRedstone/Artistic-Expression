@@ -1,0 +1,13 @@
+{
+  "itemGroup.artisticexpression": "Example Mod Tab",
+  "block.artisticexpression.example_block": "Example Block",
+  "item.artisticexpression.example_item": "Example Item",
+
+  "artisticexpression.configuration.title": "Artistic Expression Configs",
+  "artisticexpression.configuration.section.artisticexpression.common.toml": "Artistic Expression Configs",
+  "artisticexpression.configuration.section.artisticexpression.common.toml.title": "Artistic Expression Configs",
+  "artisticexpression.configuration.items": "Item List",
+  "artisticexpression.configuration.logDirtBlock": "Log Dirt Block",
+  "artisticexpression.configuration.magicNumberIntroduction": "Magic Number Text",
+  "artisticexpression.configuration.magicNumber": "Magic Number"
+}
