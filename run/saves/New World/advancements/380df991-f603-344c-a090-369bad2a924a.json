@@ -775,18 +775,6 @@
     },
     "done": true
   },
-  "minecraft:recipes/combat/bow": {
-    "criteria": {
-      "has_strand": "2026-05-26 20:39:54 +0800"
-    },
-    "done": true
-  },
-  "minecraft:recipes/tools/fishing_rod": {
-    "criteria": {
-      "has_strand": "2026-05-26 20:39:54 +0800"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/white_wool_from_string": {
     "criteria": {
       "has_string": "2026-05-26 20:17:48 +0800"
@@ -805,6 +793,18 @@
     },
     "done": true
   },
+  "minecraft:recipes/combat/bow": {
+    "criteria": {
+      "has_strand": "2026-05-26 20:39:54 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/fishing_rod": {
+    "criteria": {
+      "has_strand": "2026-05-26 20:39:54 +0800"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/candle": {
     "criteria": {
       "has_strand": "2026-05-26 20:39:54 +0800"
@@ -814,6 +814,120 @@
   "minecraft:recipes/decorations/loom": {
     "criteria": {
       "has_strand": "2026-05-26 20:39:54 +0800"
+    },
+    "done": true
+  },
+  "artisticexpression:recipes/decorations/blue_giant_candle_from_dyeing": {
+    "criteria": {
+      "has_candle": "2026-05-28 19:34:03 +0800"
+    },
+    "done": true
+  },
+  "artisticexpression:recipes/decorations/brown_giant_candle_from_dyeing": {
+    "criteria": {
+      "has_candle": "2026-05-28 19:34:03 +0800"
+    },
+    "done": true
+  },
+  "artisticexpression:recipes/decorations/cyan_giant_candle_from_dyeing": {
+    "criteria": {
+      "has_candle": "2026-05-28 19:34:03 +0800"
+    },
+    "done": true
+  },
+  "artisticexpression:recipes/decorations/black_giant_candle_from_dyeing": {
+    "criteria": {
+      "has_candle": "2026-05-28 19:34:03 +0800"
+    },
+    "done": true
+  },
+  "artisticexpression:recipes/decorations/green_giant_candle_from_dyeing": {
+    "criteria": {
+      "has_candle": "2026-05-28 19:34:03 +0800"
+    },
+    "done": true
+  },
+  "artisticexpression:recipes/decorations/purple_giant_candle_from_dyeing": {
+    "criteria": {
+      "has_candle": "2026-05-28 19:34:03 +0800"
+    },
+    "done": true
+  },
+  "artisticexpression:recipes/decorations/yellow_giant_candle_from_dyeing": {
+    "criteria": {
+      "has_candle": "2026-05-28 19:34:03 +0800"
+    },
+    "done": true
+  },
+  "artisticexpression:recipes/decorations/light_blue_giant_candle_from_dyeing": {
+    "criteria": {
+      "has_candle": "2026-05-28 19:34:03 +0800"
+    },
+    "done": true
+  },
+  "artisticexpression:recipes/decorations/white_giant_candle_from_dyeing": {
+    "criteria": {
+      "has_candle": "2026-05-28 19:34:03 +0800"
+    },
+    "done": true
+  },
+  "artisticexpression:recipes/decorations/light_gray_giant_candle_from_dyeing": {
+    "criteria": {
+      "has_candle": "2026-05-28 19:34:03 +0800"
+    },
+    "done": true
+  },
+  "artisticexpression:recipes/decorations/pink_giant_candle_from_dyeing": {
+    "criteria": {
+      "has_candle": "2026-05-28 19:34:03 +0800"
+    },
+    "done": true
+  },
+  "artisticexpression:recipes/decorations/gray_giant_candle_from_dyeing": {
+    "criteria": {
+      "has_candle": "2026-05-28 19:34:03 +0800"
+    },
+    "done": true
+  },
+  "artisticexpression:recipes/decorations/orange_giant_candle_from_dyeing": {
+    "criteria": {
+      "has_candle": "2026-05-28 19:34:03 +0800"
+    },
+    "done": true
+  },
+  "artisticexpression:recipes/decorations/red_giant_candle_from_dyeing": {
+    "criteria": {
+      "has_candle": "2026-05-28 19:34:03 +0800"
+    },
+    "done": true
+  },
+  "artisticexpression:recipes/decorations/magenta_giant_candle_from_dyeing": {
+    "criteria": {
+      "has_candle": "2026-05-28 19:34:03 +0800"
+    },
+    "done": true
+  },
+  "artisticexpression:recipes/decorations/lime_giant_candle_from_dyeing": {
+    "criteria": {
+      "has_candle": "2026-05-28 19:34:03 +0800"
+    },
+    "done": true
+  },
+  "artisticexpression:recipes/decorations/giant_candle": {
+    "criteria": {
+      "has_strand": "2026-05-28 19:44:23 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/beehive": {
+    "criteria": {
+      "has_honeycomb": "2026-05-28 19:44:41 +0800"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/honeycomb_block": {
+    "criteria": {
+      "has_honeycomb": "2026-05-28 19:44:41 +0800"
     },
     "done": true
   },

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "artisticexpression:block/black_giant_candle"
+    },
+    "lit=true": {
+      "model": "artisticexpression:block/black_giant_candle"
+    }
+  }
+}

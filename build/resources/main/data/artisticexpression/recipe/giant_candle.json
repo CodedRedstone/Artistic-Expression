@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "tag": "artisticexpression:wax"
+    },
+    "S": {
+      "tag": "artisticexpression:strand"
+    }
+  },
+  "pattern": [
+    "S ",
+    "##",
+    "##"
+  ],
+  "result": {
+    "count": 1,
+    "id": "artisticexpression:giant_candle"
+  }
+}

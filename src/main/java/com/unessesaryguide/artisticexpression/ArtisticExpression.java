@@ -1,5 +1,6 @@
 package com.unessesaryguide.artisticexpression;
 
+import com.unessesaryguide.artisticexpression.block.GeneralBlocks;
 import com.unessesaryguide.artisticexpression.item.GeneralItems;
 import com.mojang.logging.LogUtils;
 import com.unessesaryguide.artisticexpression.loot.ModLootModifiers;
@@ -29,13 +30,22 @@ public class ArtisticExpression {
                 .withTabsBefore(CreativeModeTabs.COMBAT)
                 .icon(() -> GeneralItems.SHAVED_FLEECE.get(DyeColor.WHITE).get().getDefaultInstance())
                 .displayItems((parameters, output) -> {
-
+                    // Fleece
                     for (DyeColor color : DyeColor.values()) {
                         output.accept(GeneralItems.SHAVED_FLEECE.get(color).get());
+                    }
+
+                    output.accept(GeneralItems.THREAD.get());
+
+                    // Giant candles
+                    output.accept(GeneralItems.GIANT_CANDLE.get());
+                    for (DyeColor color : DyeColor.values()) {
+                        output.accept(GeneralItems.COLORED_GIANT_CANDLE.get(color).get());
                     }
                 }).build());
 
     public ArtisticExpression(IEventBus modEventBus) {
+        GeneralBlocks.register(modEventBus);
         GeneralItems.register(modEventBus);
         ModLootModifiers.LOOT_MODIFIERS.register(modEventBus);
         CREATIVE_MODE_TABS.register(modEventBus);

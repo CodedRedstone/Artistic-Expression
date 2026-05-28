@@ -2,3 +2,10 @@
 /gamerule doDaylightCycle false
 /kill @e[name="sheep"]
 /kill @e[name="Sheep"]
+/give @p artisticexpression:yellow_giant_candle
+/give @p candl
+/time set night
+/time set day
+/gamemode survival
+/gamemode creative
+/give @a artisticexpression:lard

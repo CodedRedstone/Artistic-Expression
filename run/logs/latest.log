@@ -1,100 +1,48 @@
-[26May2026 20:39:22.545] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientdev, --version, 21.1.228, --assetIndex, 17, --assetsDir, C:\\Users\\MSI-ADMIN\\.gradle\\caches\\neoformruntime\\assets, --gameDir, ., --fml.fmlVersion, 4.0.42, --fml.mcVersion, 1.21.1, --fml.neoForgeVersion, 21.1.228, --fml.neoFormVersion, 20240808.144430]
-[26May2026 20:39:22.545] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Eclipse Adoptium OpenJDK 64-Bit Server VM 21.0.9+10-LTS
-[26May2026 20:39:22.545] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 11.0.5+main.901c6ea8 starting: java version 21.0.9 by Eclipse Adoptium; OS Windows 11 arch amd64 version 10.0
-[26May2026 20:39:22.671] [main/INFO] [net.neoforged.fml.loading.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow
-[26May2026 20:39:22.831] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6
-[26May2026 20:39:22.933] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.6 got version 4.6
-[26May2026 20:39:23.086] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=union:/C:/Users/MSI-ADMIN/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.2+mixin.0.8.7/2af2f021d8e02a0220dc27a7a72b4666d66d44ca/sponge-mixin-0.15.2+mixin.0.8.7.jar%23138!/ Service=ModLauncher Env=CLIENT
-[26May2026 20:39:23.317] [pool-2-thread-1/INFO] [EARLYDISPLAY/]: GL info: AMD Radeon(TM) Graphics GL version 4.6.0 Core Profile Context 26.1.1.251211, ATI Technologies Inc.
-[26May2026 20:39:23.536] [main/INFO] [net.neoforged.fml.loading.moddiscovery.locators.JarInJarDependencyLocator/]: Found 2 dependencies adding them to mods collection
-[26May2026 20:39:23.538] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/]: 
+[28May2026 20:43:59.626] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatadev, --assetIndex, 17, --assetsDir, C:\\Users\\MSI-ADMIN\\.gradle\\caches\\neoformruntime\\assets, --gameDir, ., --fml.fmlVersion, 4.0.42, --fml.mcVersion, 1.21.1, --fml.neoForgeVersion, 21.1.228, --fml.neoFormVersion, 20240808.144430, --mod, artisticexpression, --all, --output, C:\\Users\\MSI-ADMIN\\IdeaProjects\\Artistic-Expression\\src\\generated\\resources, --existing, C:\\Users\\MSI-ADMIN\\IdeaProjects\\Artistic-Expression\\src\\main\\resources]
+[28May2026 20:43:59.630] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Eclipse Adoptium OpenJDK 64-Bit Server VM 21.0.9+10-LTS
+[28May2026 20:43:59.632] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 11.0.5+main.901c6ea8 starting: java version 21.0.9 by Eclipse Adoptium; OS Windows 11 arch amd64 version 10.0
+[28May2026 20:43:59.744] [main/INFO] [net.neoforged.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatadev
+[28May2026 20:43:59.796] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=union:/C:/Users/MSI-ADMIN/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.2+mixin.0.8.7/2af2f021d8e02a0220dc27a7a72b4666d66d44ca/sponge-mixin-0.15.2+mixin.0.8.7.jar%23138!/ Service=ModLauncher Env=CLIENT
+[28May2026 20:44:00.139] [main/INFO] [net.neoforged.fml.loading.moddiscovery.locators.JarInJarDependencyLocator/]: Found 2 dependencies adding them to mods collection
+[28May2026 20:44:00.141] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/]: 
      Mod List:
 		Name Version (Mod Id)
 
 		Artistic Expression 1.0.0 (artisticexpression)
 		Minecraft 1.21.1 (minecraft)
 		NeoForge 21.1.228 (neoforge)
-[26May2026 20:39:24.831] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientdev' with arguments [--version, 21.1.228, --gameDir, ., --assetsDir, C:\Users\MSI-ADMIN\.gradle\caches\neoformruntime\assets, --assetIndex, 17]
-[26May2026 20:39:26.723] [Datafixer Bootstrap/INFO] [com.mojang.datafixers.DataFixerBuilder/]: 229 Datafixer optimizations took 478 milliseconds
-[26May2026 20:39:26.879] [main/WARN] [oshi.driver.windows.perfmon.PerfmonDisabled/]: Invalid registry value type detected for PerfOS counters. Should be REG_DWORD. Ignoring: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfOS\Performance\Disable Performance Counters.
-[26May2026 20:39:26.921] [pool-7-thread-1/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.3).
-[26May2026 20:39:32.251] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[26May2026 20:39:32.267] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
-[26May2026 20:39:32.267] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[26May2026 20:39:32.267] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[26May2026 20:39:32.267] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[26May2026 20:39:32.411] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/MSI-ADMIN/IdeaProjects/Artistic-Expression/build/moddev/artifacts/neoforge-21.1.228.jar%23189!/assets/.mcassetsroot' uses unexpected schema
-[26May2026 20:39:32.411] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/MSI-ADMIN/IdeaProjects/Artistic-Expression/build/moddev/artifacts/neoforge-21.1.228.jar%23189!/data/.mcassetsroot' uses unexpected schema
-[26May2026 20:39:32.442] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
-[26May2026 20:39:32.459] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
-[26May2026 20:39:32.586] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.3.3+5
-[26May2026 20:39:32.824] [modloading-worker-0/INFO] [net.neoforged.neoforge.common.NeoForgeMod/NEOFORGE-MOD]: NeoForge mod loading, version 21.1.228, for MC 1.21.1
-[26May2026 20:39:33.685] [Render thread/INFO] [net.neoforged.neoforge.gametest.GameTestHooks/]: Enabled Gametest Namespaces: [artisticexpression]
-[26May2026 20:39:33.822] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: vanilla, mod_resources, mod/artisticexpression, mod/neoforge
-[26May2026 20:39:33.915] [Worker-Main-5/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_all_no_pua-15.1.05.hex, loading
-[26May2026 20:39:34.131] [Worker-Main-7/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_jp_patch-15.1.05.hex, loading
-[26May2026 20:39:34.776] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'artisticexpression:item/blue_shaved_fleece' referenced from: artisticexpression:item/blue_shaved_fleece: java.io.FileNotFoundException: artisticexpression:models/item/blue_shaved_fleece.json
-[26May2026 20:39:34.779] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'artisticexpression:item/light_gray_shaved_fleece' referenced from: artisticexpression:item/light_gray_shaved_fleece: java.io.FileNotFoundException: artisticexpression:models/item/light_gray_shaved_fleece.json
-[26May2026 20:39:34.783] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'artisticexpression:item/magenta_shaved_fleece' referenced from: artisticexpression:item/magenta_shaved_fleece: java.io.FileNotFoundException: artisticexpression:models/item/magenta_shaved_fleece.json
-[26May2026 20:39:34.784] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'artisticexpression:item/pink_shaved_fleece' referenced from: artisticexpression:item/pink_shaved_fleece: java.io.FileNotFoundException: artisticexpression:models/item/pink_shaved_fleece.json
-[26May2026 20:39:34.785] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'artisticexpression:item/white_shaved_fleece' referenced from: artisticexpression:item/white_shaved_fleece: java.io.FileNotFoundException: artisticexpression:models/item/white_shaved_fleece.json
-[26May2026 20:39:34.785] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'artisticexpression:item/purple_shaved_fleece' referenced from: artisticexpression:item/purple_shaved_fleece: java.io.FileNotFoundException: artisticexpression:models/item/purple_shaved_fleece.json
-[26May2026 20:39:34.786] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'artisticexpression:item/gray_shaved_fleece' referenced from: artisticexpression:item/gray_shaved_fleece: java.io.FileNotFoundException: artisticexpression:models/item/gray_shaved_fleece.json
-[26May2026 20:39:35.686] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:item.goat_horn.play
-[26May2026 20:39:35.687] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.goat.screaming.horn_break
-[26May2026 20:39:35.846] [Render thread/INFO] [com.mojang.blaze3d.audio.Library/]: OpenAL initialized on device OpenAL Soft on Realtek HD Audio 2nd output (Realtek High Definition Audio)
-[26May2026 20:39:35.847] [Render thread/INFO] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Sound engine started
-[26May2026 20:39:35.997] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
-[26May2026 20:39:36.006] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
-[26May2026 20:39:36.006] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
-[26May2026 20:39:36.007] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
-[26May2026 20:39:36.010] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
-[26May2026 20:39:36.019] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
-[26May2026 20:39:36.020] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
-[26May2026 20:39:36.020] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
-[26May2026 20:39:36.020] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
-[26May2026 20:39:36.203] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
-[26May2026 20:39:36.205] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/paintings.png-atlas
-[26May2026 20:39:36.206] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x128x0 minecraft:textures/atlas/mob_effects.png-atlas
-[26May2026 20:39:36.206] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 64x64x0 minecraft:textures/atlas/map_decorations.png-atlas
-[26May2026 20:39:36.206] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x0 minecraft:textures/atlas/gui.png-atlas
-[26May2026 20:39:36.239] [Render thread/WARN] [net.minecraft.client.renderer.ShaderInstance/]: Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
-[26May2026 20:39:36.307] [Render thread/INFO] [net.neoforged.neoforge.client.entity.animation.json.AnimationLoader/]: Loaded 0 entity animations
-[26May2026 20:39:51.309] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Loaded 1307 recipes
-[26May2026 20:39:51.473] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 1415 advancements
-[26May2026 20:39:51.886] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Starting integrated minecraft server version 1.21.1
-[26May2026 20:39:51.887] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
-[26May2026 20:39:52.764] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
-[26May2026 20:39:53.009] [progressListener/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[26May2026 20:39:53.093] [Server thread/INFO] [net.neoforged.neoforge.server.permission.PermissionAPI/]: Successfully initialized permission handler neoforge:default_handler
-[26May2026 20:39:53.099] [progressListener/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Time elapsed: 327 ms
-[26May2026 20:39:53.186] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing view distance to 12, from 10
-[26May2026 20:39:53.186] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing simulation distance to 12, from 0
-[26May2026 20:39:54.003] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: Dev[local:E:3a682b4c] logged in with entity id 10 at (223.77425658096428, 110.0, 53.838787248435736)
-[26May2026 20:39:54.072] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
-[26May2026 20:39:54.492] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 173 advancements
-[26May2026 20:39:54.852] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
-[26May2026 20:39:54.890] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
-[26May2026 20:39:54.905] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
-[26May2026 20:39:54.906] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
-[26May2026 20:41:19.257] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 173 advancements
-[26May2026 20:41:28.274] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Dev: Killed 10 entities]
-[26May2026 20:41:28.292] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Killed 10 entities
-[26May2026 20:41:57.196] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
-[26May2026 20:41:57.215] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
-[26May2026 20:41:57.228] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
-[26May2026 20:41:57.229] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
-[26May2026 20:42:09.975] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!
-[26May2026 20:42:10.015] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Dev lost connection: Disconnected
-[26May2026 20:42:10.015] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev left the game
-[26May2026 20:42:10.027] [Server thread/INFO] [net.minecraft.server.network.ServerCommonPacketListenerImpl/]: Stopping singleplayer server as player logged out
-[26May2026 20:42:10.046] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
-[26May2026 20:42:10.047] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
-[26May2026 20:42:10.047] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
-[26May2026 20:42:10.453] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
-[26May2026 20:42:10.999] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
-[26May2026 20:42:11.001] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
-[26May2026 20:42:11.011] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (New World): All chunks are saved
-[26May2026 20:42:11.011] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
-[26May2026 20:42:11.012] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[26May2026 20:42:11.012] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage: All dimensions are saved
+[28May2026 20:44:00.975] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatadev' with arguments [--gameDir, ., --assetsDir, C:\Users\MSI-ADMIN\.gradle\caches\neoformruntime\assets, --assetIndex, 17, --mod, artisticexpression, --all, --output, C:\\Users\\MSI-ADMIN\\IdeaProjects\\Artistic-Expression\\src\\generated\\resources, --existing, C:\\Users\\MSI-ADMIN\\IdeaProjects\\Artistic-Expression\\src\\main\\resources]
+[28May2026 20:44:01.340] [main/INFO] [net.neoforged.neoforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [artisticexpression]
+[28May2026 20:44:01.352] [main/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.3).
+[28May2026 20:44:05.517] [modloading-worker-0/INFO] [net.neoforged.neoforge.common.NeoForgeMod/NEOFORGE-MOD]: NeoForge mod loading, version 21.1.228, for MC 1.21.1
+[28May2026 20:44:05.847] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/MSI-ADMIN/IdeaProjects/Artistic-Expression/build/moddev/artifacts/neoforge-21.1.228.jar%23189!/assets/.mcassetsroot' uses unexpected schema
+[28May2026 20:44:05.847] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/MSI-ADMIN/IdeaProjects/Artistic-Expression/build/moddev/artifacts/neoforge-21.1.228.jar%23189!/data/.mcassetsroot' uses unexpected schema
+[28May2026 20:44:06.065] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: en_us for mod: artisticexpression
+[28May2026 20:44:06.068] [main/INFO] [com.unessesaryguide.artisticexpression.datagen.ModLanguageProvider/]: [Artistic Expression] Adding lang entries for 'giant_candle'
+[28May2026 20:44:06.068] [main/INFO] [com.unessesaryguide.artisticexpression.datagen.ModLanguageProvider/]: [Artistic Expression] Adding lang entries for 'shaved_fleece'
+[28May2026 20:44:06.072] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: en_us for mod: artisticexpression finished after 6 ms
+[28May2026 20:44:06.072] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: artisticexpression
+[28May2026 20:44:06.081] [main/WARN] [com.unessesaryguide.artisticexpression.datagen.ModItemModelProvider/]: [Artistic Expression] Missing texture for 'orange_giant_candle', skipping item model
+[28May2026 20:44:06.081] [main/WARN] [com.unessesaryguide.artisticexpression.datagen.ModItemModelProvider/]: [Artistic Expression] Missing texture for 'magenta_giant_candle', skipping item model
+[28May2026 20:44:06.081] [main/WARN] [com.unessesaryguide.artisticexpression.datagen.ModItemModelProvider/]: [Artistic Expression] Missing texture for 'light_blue_giant_candle', skipping item model
+[28May2026 20:44:06.081] [main/WARN] [com.unessesaryguide.artisticexpression.datagen.ModItemModelProvider/]: [Artistic Expression] Missing texture for 'yellow_giant_candle', skipping item model
+[28May2026 20:44:06.081] [main/WARN] [com.unessesaryguide.artisticexpression.datagen.ModItemModelProvider/]: [Artistic Expression] Missing texture for 'lime_giant_candle', skipping item model
+[28May2026 20:44:06.081] [main/WARN] [com.unessesaryguide.artisticexpression.datagen.ModItemModelProvider/]: [Artistic Expression] Missing texture for 'pink_giant_candle', skipping item model
+[28May2026 20:44:06.082] [main/WARN] [com.unessesaryguide.artisticexpression.datagen.ModItemModelProvider/]: [Artistic Expression] Missing texture for 'purple_giant_candle', skipping item model
+[28May2026 20:44:06.082] [main/WARN] [com.unessesaryguide.artisticexpression.datagen.ModItemModelProvider/]: [Artistic Expression] Missing texture for 'brown_giant_candle', skipping item model
+[28May2026 20:44:06.083] [main/WARN] [com.unessesaryguide.artisticexpression.datagen.ModItemModelProvider/]: [Artistic Expression] Missing texture for 'white_shaved_fleece', skipping model generation
+[28May2026 20:44:06.084] [main/WARN] [com.unessesaryguide.artisticexpression.datagen.ModItemModelProvider/]: [Artistic Expression] Missing texture for 'magenta_shaved_fleece', skipping model generation
+[28May2026 20:44:06.085] [main/WARN] [com.unessesaryguide.artisticexpression.datagen.ModItemModelProvider/]: [Artistic Expression] Missing texture for 'pink_shaved_fleece', skipping model generation
+[28May2026 20:44:06.086] [main/WARN] [com.unessesaryguide.artisticexpression.datagen.ModItemModelProvider/]: [Artistic Expression] Missing texture for 'gray_shaved_fleece', skipping model generation
+[28May2026 20:44:06.086] [main/WARN] [com.unessesaryguide.artisticexpression.datagen.ModItemModelProvider/]: [Artistic Expression] Missing texture for 'light_gray_shaved_fleece', skipping model generation
+[28May2026 20:44:06.086] [main/WARN] [com.unessesaryguide.artisticexpression.datagen.ModItemModelProvider/]: [Artistic Expression] Missing texture for 'purple_shaved_fleece', skipping model generation
+[28May2026 20:44:06.086] [main/WARN] [com.unessesaryguide.artisticexpression.datagen.ModItemModelProvider/]: [Artistic Expression] Missing texture for 'blue_shaved_fleece', skipping model generation
+[28May2026 20:44:06.095] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: artisticexpression finished after 21 ms
+[28May2026 20:44:06.095] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
+[28May2026 20:44:06.156] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 62 ms
+[28May2026 20:44:06.156] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id vanilla
+[28May2026 20:44:06.165] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id vanilla finished after 7 ms
+[28May2026 20:44:06.165] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: artisticexpression
+[28May2026 20:44:06.182] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: artisticexpression finished after 16 ms
+[28May2026 20:44:06.182] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 116 ms
+[28May2026 20:44:06.192] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 108, old count: 107, new count: 109, removed stale: 0, written: 2

@@ -3,13 +3,11 @@ package com.unessesaryguide.artisticexpression.datagen;
 import com.unessesaryguide.artisticexpression.ArtisticExpression;
 import com.unessesaryguide.artisticexpression.item.GeneralItems;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.recipes.RecipeCategory;
-import net.minecraft.data.recipes.RecipeOutput;
-import net.minecraft.data.recipes.RecipeProvider;
-import net.minecraft.data.recipes.ShapedRecipeBuilder;
+import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.item.DyeItem;
 import net.minecraft.world.item.Items;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 import java.util.Map;
@@ -55,6 +53,27 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_fleece", has(fleeceEntry.get()))
                 .save(output, ArtisticExpression.MODID + ":fleece_to_" + color.getName() + "_wool");
         }
+
+        for (DyeColor color : DyeColor.values()) {
+            var candleItem = GeneralItems.COLORED_GIANT_CANDLE.get(color);
+            if (candleItem == null) continue;
+
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, candleItem.get())
+                .requires(ModItemTagProvider.GIANT_CANDLE) // any giant candle
+                .requires(DyeItem.byColor(color))
+                .unlockedBy("has_candle", has(GeneralItems.GIANT_CANDLE.get()))
+                .save(output, ResourceLocation.fromNamespaceAndPath(ArtisticExpression.MODID,
+                    color.getName() + "_giant_candle_from_dyeing"));
+        }
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, GeneralItems.GIANT_CANDLE)
+            .pattern("S ")
+            .pattern("##")
+            .pattern("##")
+            .define('S', ModItemTagProvider.STRAND)
+            .define('#', ModItemTagProvider.WAX)
+            .unlockedBy("has_strand", has(ModItemTagProvider.STRAND))
+            .save(output, ResourceLocation.fromNamespaceAndPath("artisticexpression", "giant_candle"));
 
         // Bow - uses minecraft:bow as the key, overriding vanilla
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, Items.BOW)

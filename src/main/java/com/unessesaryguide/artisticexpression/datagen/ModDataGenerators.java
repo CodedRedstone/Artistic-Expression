@@ -31,5 +31,8 @@ public class ModDataGenerators {
         generator.addProvider(event.includeServer(),
             new ModItemTagProvider(output, event.getLookupProvider(),
                 CompletableFuture.completedFuture(null)));
+
+        generator.addProvider(event.includeClient(),
+            new ModBlockStateProvider(output, existingFileHelper));
     }
 }

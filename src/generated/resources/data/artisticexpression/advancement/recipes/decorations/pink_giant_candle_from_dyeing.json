@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_candle": {
+      "conditions": {
+        "items": [
+          {
+            "items": "artisticexpression:giant_candle"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "artisticexpression:pink_giant_candle_from_dyeing"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_candle"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "artisticexpression:pink_giant_candle_from_dyeing"
+    ]
+  }
+}

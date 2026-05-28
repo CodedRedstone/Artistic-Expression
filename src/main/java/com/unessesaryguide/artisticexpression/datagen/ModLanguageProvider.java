@@ -22,12 +22,12 @@ public class ModLanguageProvider extends LanguageProvider {
 
     @Override
     protected void addTranslations() {
-        // Creative tab
         add("itemGroup.artisticexpression", "Artistic Expression");
 
         add(GeneralItems.THREAD.get(), "Thread");
+        add("block." + ArtisticExpression.MODID + ".giant_candle", "Giant Candle");
 
-        // Looped color variants
+        addColoredItems("giant_candle", GeneralItems.COLORED_GIANT_CANDLE);
         addColoredItems("shaved_fleece", GeneralItems.SHAVED_FLEECE);
     }
 
