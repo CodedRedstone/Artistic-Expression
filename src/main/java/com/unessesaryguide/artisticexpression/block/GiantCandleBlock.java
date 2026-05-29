@@ -1,8 +1,11 @@
 package com.unessesaryguide.artisticexpression.block;
 
+import com.unessesaryguide.artisticexpression.particle.ModParticleTypes;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.ItemInteractionResult;
@@ -27,11 +30,27 @@ public class GiantCandleBlock extends Block {
     }
 
     @Override
+    public void neighborChanged(BlockState state, Level level, BlockPos pos, Block neighborBlock, BlockPos neighborPos, boolean movedByPiston) {
+        super.neighborChanged(state, level, pos, neighborBlock, neighborPos, movedByPiston);
+
+        if (!neighborPos.equals(pos.above())) return;
+        if (!state.getValue(LIT)) return;
+
+        BlockState above = level.getBlockState(pos.above());
+        boolean isSolid = !above.isAir() && !above.canBeReplaced() && above.isSolidRender(level, pos.above());
+        boolean isCandle = above.getBlock() instanceof GiantCandleBlock;
+
+        if (isSolid || isCandle) {
+            level.setBlock(pos, state.setValue(LIT, false), 3);
+            level.playSound(null, pos, SoundEvents.CANDLE_EXTINGUISH, SoundSource.BLOCKS, 1.0f, 1.0f);
+        }
+    }
+
+    @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(LIT);
     }
 
-    // Returns the position of the topmost GiantCandleBlock in the stack
     private BlockPos getTopCandle(Level level, BlockPos pos) {
         BlockPos current = pos;
         while (level.getBlockState(current.above()).getBlock() instanceof GiantCandleBlock) {
@@ -41,17 +60,41 @@ public class GiantCandleBlock extends Block {
     }
 
     @Override
+    public void animateTick(BlockState state, Level level, BlockPos pos, RandomSource random) {
+        if (!state.getValue(LIT)) return;
+        if (level.getBlockState(pos.above()).getBlock() instanceof GiantCandleBlock) return;
+
+        double baseX = pos.getX() + 0.5;
+        double baseY = pos.getY() + 1.4;
+        double baseZ = pos.getZ() + 0.5;
+
+        int count = 3 + random.nextInt(2);
+        for (int i = 0; i < count; i++) {
+            double x = baseX + (random.nextDouble() - 0.5) * 0.1;
+            double z = baseZ + (random.nextDouble() - 0.5) * 0.1;
+
+            level.addParticle(ModParticleTypes.LARGE_FLAME.get(), x, baseY, z, 0, 0, 0);
+        }
+
+        if (random.nextInt(2) == 0) {
+            level.addParticle(ParticleTypes.SMOKE,
+                baseX + (random.nextDouble() - 0.5) * 0.1,
+                baseY + 0.1,
+                baseZ + (random.nextDouble() - 0.5) * 0.1,
+                0, 0.01, 0);
+        }
+    }
+
+    @Override
     public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos,
                                             Player player, BlockHitResult hit) {
         BlockPos topPos = getTopCandle(level, pos);
 
-        // Only act on the topmost candle
         if (!topPos.equals(pos)) {
             BlockState topState = level.getBlockState(topPos);
             return topState.useWithoutItem(level, player, hit.withPosition(topPos));
         }
 
-        // Extinguish if lit
         if (state.getValue(LIT)) {
             level.setBlock(pos, state.setValue(LIT, false), 3);
             level.playSound(null, pos, SoundEvents.CANDLE_EXTINGUISH, SoundSource.BLOCKS, 1.0f, 1.0f);
@@ -66,13 +109,11 @@ public class GiantCandleBlock extends Block {
                                            InteractionHand hand, BlockHitResult hit) {
         BlockPos topPos = getTopCandle(level, pos);
 
-        // Only act on the topmos       t candle
         if (!topPos.equals(pos)) {
             BlockState topState = level.getBlockState(topPos);
             return topState.useItemOn(stack, level, player, hand, hit.withPosition(topPos));
         }
 
-        // Light with flint and steel
         if (!state.getValue(LIT) && stack.is(Items.FLINT_AND_STEEL)) {
             level.setBlock(pos, state.setValue(LIT, true), 3);
             level.playSound(null, pos, SoundEvents.FLINTANDSTEEL_USE, SoundSource.BLOCKS, 1.0f, 1.0f);

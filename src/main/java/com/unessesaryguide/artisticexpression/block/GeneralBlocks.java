@@ -24,9 +24,9 @@ public class GeneralBlocks {
     public static final DeferredBlock<GiantCandleBlock> GIANT_CANDLE =
         BLOCKS.register("giant_candle",
             () -> new GiantCandleBlock(BlockBehaviour.Properties.of()
-                .strength(0.1f)
+                .strength(0.8f)
                 .sound(SoundType.CANDLE)
-                .lightLevel(state -> state.getValue(BlockStateProperties.LIT) ? 12 : 0)
+                .lightLevel(state -> state.getValue(BlockStateProperties.LIT) ? 14 : 0)
                 .noOcclusion()
             ));
 
@@ -38,7 +38,7 @@ public class GeneralBlocks {
             COLORED_GIANT_CANDLE.put(color, BLOCKS.register(
                 color.getName() + "_giant_candle",
                 () -> new GiantCandleBlock(BlockBehaviour.Properties.of()
-                    .strength(0.1f)
+                    .strength(0.8f)
                     .sound(SoundType.CANDLE)
                     .lightLevel(state -> state.getValue(BlockStateProperties.LIT) ? 14 : 0)
                     .noOcclusion()

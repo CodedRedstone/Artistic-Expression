@@ -4,6 +4,7 @@ import com.unessesaryguide.artisticexpression.block.GeneralBlocks;
 import com.unessesaryguide.artisticexpression.item.GeneralItems;
 import com.mojang.logging.LogUtils;
 import com.unessesaryguide.artisticexpression.loot.ModLootModifiers;
+import com.unessesaryguide.artisticexpression.particle.ModParticleTypes;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.DyeColor;
@@ -48,6 +49,7 @@ public class ArtisticExpression {
         GeneralBlocks.register(modEventBus);
         GeneralItems.register(modEventBus);
         ModLootModifiers.LOOT_MODIFIERS.register(modEventBus);
+        ModParticleTypes.register(modEventBus); // add this
         CREATIVE_MODE_TABS.register(modEventBus);
     }
 }

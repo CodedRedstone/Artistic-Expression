@@ -4,7 +4,7 @@
       "model": "artisticexpression:block/gray_giant_candle"
     },
     "lit=true": {
-      "model": "artisticexpression:block/gray_giant_candle"
+      "model": "artisticexpression:block/gray_giant_candle_lit"
     }
   }
 }

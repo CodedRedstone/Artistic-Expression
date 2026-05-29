@@ -1,0 +1,6 @@
+{
+  "parent": "artisticexpression:block/giant_candle",
+  "textures": {
+    "1": "artisticexpression:block/giant_candle_lit"
+  }
+}

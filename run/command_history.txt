@@ -9,3 +9,14 @@
 /gamemode survival
 /gamemode creative
 /give @a artisticexpression:lard
+/gamemode survival
+/give @p minecraft:diamond_hoe
+/gamemode creative
+/gamemode survival
+/gamemode creative
+/weather clear
+/gamemode spectator
+/gamemode creative
+/time set noon
+/time set midnight
+/time set noon

@@ -22,17 +22,25 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
+        boolean hasBaseLit = existingFileHelper.exists(
+            ResourceLocation.fromNamespaceAndPath(ArtisticExpression.MODID, "textures/block/giant_candle_lit.png"),
+            net.minecraft.server.packs.PackType.CLIENT_RESOURCES);
+
+        models().getBuilder("giant_candle_lit")
+            .parent(new ModelFile.UncheckedModelFile(
+                ResourceLocation.fromNamespaceAndPath(ArtisticExpression.MODID, "block/giant_candle")))
+            .texture("1", ResourceLocation.fromNamespaceAndPath(ArtisticExpression.MODID,
+                hasBaseLit ? "block/giant_candle_lit" : "block/giant_candle"));
+
         registerGiantCandle("giant_candle");
 
         for (DyeColor color : DyeColor.values()) {
             String name = color.getName() + "_giant_candle";
-
             if (!existingFileHelper.exists(
                 ResourceLocation.fromNamespaceAndPath(ArtisticExpression.MODID, "textures/block/" + name + ".png"),
                 net.minecraft.server.packs.PackType.CLIENT_RESOURCES)) {
                 continue;
             }
-
             registerGiantCandle(name);
         }
     }
@@ -40,19 +48,41 @@ public class ModBlockStateProvider extends BlockStateProvider {
     private void registerGiantCandle(String name) {
         boolean isBase = name.equals("giant_candle");
 
-        ResourceLocation unlitLoc = ResourceLocation.fromNamespaceAndPath(ArtisticExpression.MODID, "block/" + name);
-        ResourceLocation litLoc = ResourceLocation.fromNamespaceAndPath(ArtisticExpression.MODID, "block/" + name + "_lit");
+        ModelFile unlit;
+        ModelFile lit;
 
-        ModelFile unlit = new ModelFile.UncheckedModelFile(unlitLoc);
+        if (isBase) {
+            unlit = new ModelFile.UncheckedModelFile(
+                ResourceLocation.fromNamespaceAndPath(ArtisticExpression.MODID, "block/" + name));
+            lit = new ModelFile.UncheckedModelFile(
+                ResourceLocation.fromNamespaceAndPath(ArtisticExpression.MODID, "block/" + name + "_lit"));
+        } else {
+            ResourceLocation texture = ResourceLocation.fromNamespaceAndPath(ArtisticExpression.MODID, "block/" + name);
+            ResourceLocation textureLit = ResourceLocation.fromNamespaceAndPath(ArtisticExpression.MODID, "block/" + name + "_lit");
 
-        // Use lit model if it exists, otherwise fall back to unlit
-        boolean hasLit = existingFileHelper.exists(
-            ResourceLocation.fromNamespaceAndPath(ArtisticExpression.MODID, "textures/block/" + name + "_lit.png"),
-            net.minecraft.server.packs.PackType.CLIENT_RESOURCES);
+            boolean hasLit = existingFileHelper.exists(
+                ResourceLocation.fromNamespaceAndPath(ArtisticExpression.MODID, "textures/block/" + name + "_lit.png"),
+                net.minecraft.server.packs.PackType.CLIENT_RESOURCES);
 
-        ModelFile lit = hasLit
-            ? new ModelFile.UncheckedModelFile(litLoc)
-            : unlit; // fallback to unlit model
+            boolean hasParticle = existingFileHelper.exists(
+                ResourceLocation.fromNamespaceAndPath(ArtisticExpression.MODID, "textures/particle/" + name + ".png"),
+                net.minecraft.server.packs.PackType.CLIENT_RESOURCES);
+
+            ResourceLocation particleTexture = ResourceLocation.fromNamespaceAndPath(ArtisticExpression.MODID,
+                hasParticle ? "particle/" + name : "particle/giant_candle");
+
+            unlit = models().getBuilder(name)
+                .parent(new ModelFile.UncheckedModelFile(
+                    ResourceLocation.fromNamespaceAndPath(ArtisticExpression.MODID, "block/giant_candle")))
+                .texture("1", texture)
+                .texture("particle", particleTexture);
+
+            lit = models().getBuilder(name + "_lit")
+                .parent(new ModelFile.UncheckedModelFile(
+                    ResourceLocation.fromNamespaceAndPath(ArtisticExpression.MODID, "block/giant_candle_lit")))
+                .texture("1", hasLit ? textureLit : texture)
+                .texture("particle", particleTexture);
+        }
 
         getVariantBuilder(isBase
             ? GeneralBlocks.GIANT_CANDLE.get()

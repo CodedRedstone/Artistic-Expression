@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "tag": "minecraft:planks"
+    },
+    "S": {
+      "tag": "artisticexpression:strand"
+    }
+  },
+  "pattern": [
+    "SS",
+    "##"
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:loom"
+  }
+}

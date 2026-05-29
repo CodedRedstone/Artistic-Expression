@@ -1,11 +1,13 @@
 package com.unessesaryguide.artisticexpression.datagen;
 
 import com.unessesaryguide.artisticexpression.ArtisticExpression;
+import com.unessesaryguide.artisticexpression.block.GeneralBlocks;
 import com.unessesaryguide.artisticexpression.item.GeneralItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.animal.Panda;

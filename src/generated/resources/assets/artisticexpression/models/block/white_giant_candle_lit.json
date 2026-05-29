@@ -1,0 +1,7 @@
+{
+  "parent": "artisticexpression:block/giant_candle_lit",
+  "textures": {
+    "1": "artisticexpression:block/white_giant_candle",
+    "particle": "artisticexpression:particle/giant_candle"
+  }
+}
