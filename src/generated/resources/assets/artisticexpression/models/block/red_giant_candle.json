@@ -2,6 +2,6 @@
   "parent": "artisticexpression:block/giant_candle",
   "textures": {
     "1": "artisticexpression:block/red_giant_candle",
-    "particle": "artisticexpression:particle/giant_candle"
+    "particle": "artisticexpression:block/giant_candle_particle"
   }
 }

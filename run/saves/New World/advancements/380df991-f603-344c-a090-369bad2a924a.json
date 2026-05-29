@@ -8,6 +8,7 @@
   "minecraft:adventure/adventuring_time": {
     "criteria": {
       "minecraft:badlands": "2026-05-26 09:20:11 +0800",
+      "minecraft:eroded_badlands": "2026-05-29 17:27:52 +0800",
       "minecraft:river": "2026-05-26 12:34:23 +0800",
       "minecraft:wooded_badlands": "2026-05-26 20:41:19 +0800"
     },
@@ -1036,6 +1037,12 @@
   "minecraft:recipes/building_blocks/white_stained_glass": {
     "criteria": {
       "has_glass": "2026-05-29 11:37:18 +0800"
+    },
+    "done": true
+  },
+  "minecraft:husbandry/obtain_netherite_hoe": {
+    "criteria": {
+      "netherite_hoe": "2026-05-29 17:32:55 +0800"
     },
     "done": true
   },

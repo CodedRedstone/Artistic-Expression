@@ -3,7 +3,7 @@
   "texture_size": [64, 64],
   "textures": {
     "particle": "artisticexpression:block/giant_candle_particle",
-    "1": "artisticexpression:block/giant_candle"
+    "1": "artisticexpression:block/giant_candle_lit"
   },
   "elements": [
     {

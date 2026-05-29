@@ -32,6 +32,8 @@ public class ModDataGenerators {
             new ModItemTagProvider(output, event.getLookupProvider(),
                 CompletableFuture.completedFuture(null)));
 
+        generator.addProvider(event.includeServer(), ModLootTableProvider.create(generator.getPackOutput(), event.getLookupProvider()));
+
         event.getGenerator().addProvider(event.includeServer(),
             new ModBlockTagProvider(
                 event.getGenerator().getPackOutput(),

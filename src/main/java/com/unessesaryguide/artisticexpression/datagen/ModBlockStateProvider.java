@@ -65,11 +65,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 net.minecraft.server.packs.PackType.CLIENT_RESOURCES);
 
             boolean hasParticle = existingFileHelper.exists(
-                ResourceLocation.fromNamespaceAndPath(ArtisticExpression.MODID, "textures/particle/" + name + ".png"),
+                ResourceLocation.fromNamespaceAndPath(ArtisticExpression.MODID, "textures/block/" + name + "_particle.png"),
                 net.minecraft.server.packs.PackType.CLIENT_RESOURCES);
 
             ResourceLocation particleTexture = ResourceLocation.fromNamespaceAndPath(ArtisticExpression.MODID,
-                hasParticle ? "particle/" + name : "particle/giant_candle");
+                hasParticle ? "block/" + name + "_particle" : "block/giant_candle_particle");
 
             unlit = models().getBuilder(name)
                 .parent(new ModelFile.UncheckedModelFile(
