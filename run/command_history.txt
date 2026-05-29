@@ -20,3 +20,18 @@
 /time set noon
 /time set midnight
 /time set noon
+/gamemode survival
+/time set noon
+/weather clear
+/kill @e
+/gamemode creative
+/gamemode survival
+/give @a minecraft:black_dye
+/give @p artisticexpression:lard 256
+/give @p minecraft:string 64
+/give @p minecraft:crafting_table
+/give @p artisticexpression:lar 256
+/give @p minecraft:honeycomb 256
+/gamemode creative
+/weather clear
+/setblock ~ ~ ~ artisticexpression:tacked_paper

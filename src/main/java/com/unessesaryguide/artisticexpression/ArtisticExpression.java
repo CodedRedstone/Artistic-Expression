@@ -1,6 +1,7 @@
 package com.unessesaryguide.artisticexpression;
 
 import com.unessesaryguide.artisticexpression.block.GeneralBlocks;
+import com.unessesaryguide.artisticexpression.block.ModBlockEntities;
 import com.unessesaryguide.artisticexpression.item.GeneralItems;
 import com.mojang.logging.LogUtils;
 import com.unessesaryguide.artisticexpression.loot.ModLootModifiers;
@@ -49,7 +50,8 @@ public class ArtisticExpression {
         GeneralBlocks.register(modEventBus);
         GeneralItems.register(modEventBus);
         ModLootModifiers.LOOT_MODIFIERS.register(modEventBus);
-        ModParticleTypes.register(modEventBus); // add this
+        ModParticleTypes.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
         CREATIVE_MODE_TABS.register(modEventBus);
     }
 }

@@ -1,6 +1,7 @@
 package com.unessesaryguide.artisticexpression.datagen;
 
 import com.unessesaryguide.artisticexpression.ArtisticExpression;
+import com.unessesaryguide.artisticexpression.block.GeneralBlocks;
 import com.unessesaryguide.artisticexpression.item.GeneralItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.item.DyeColor;
@@ -26,6 +27,7 @@ public class ModLanguageProvider extends LanguageProvider {
 
         add(GeneralItems.THREAD.get(), "Thread");
         add("block." + ArtisticExpression.MODID + ".giant_candle", "Giant Candle");
+        add("block." + ArtisticExpression.MODID + ".tacked_paper", "Tacked Paper");
 
         addColoredItems("giant_candle", GeneralItems.COLORED_GIANT_CANDLE);
         addColoredItems("shaved_fleece", GeneralItems.SHAVED_FLEECE);
@@ -46,7 +48,6 @@ public class ModLanguageProvider extends LanguageProvider {
                 continue;
             }
 
-            // Use translation key directly instead of item.get()
             String translationKey = "item." + ArtisticExpression.MODID + "." + color.getName() + "_" + baseName;
             add(translationKey, formatName(color.getName()) + " " + formatName(baseName));
         }

@@ -2,14 +2,12 @@ package com.unessesaryguide.artisticexpression.block;
 
 import com.unessesaryguide.artisticexpression.ArtisticExpression;
 import net.minecraft.world.item.DyeColor;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
-import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.EnumMap;
@@ -32,6 +30,10 @@ public class GeneralBlocks {
 
     public static final Map<DyeColor, DeferredBlock<GiantCandleBlock>> COLORED_GIANT_CANDLE =
         new EnumMap<>(DyeColor.class);
+
+    // Tacked paper
+    public static final DeferredBlock<TackedPaperBlock> TACKED_PAPER =
+        BLOCKS.register("tacked_paper", TackedPaperBlock::new);
 
     static {
         for (DyeColor color : DyeColor.values()) {
