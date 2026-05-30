@@ -52,11 +52,6 @@ public class GeneralItems {
     public static final DeferredItem<BlockItem> GIANT_CANDLE =
         ITEMS.registerSimpleBlockItem(GeneralBlocks.GIANT_CANDLE);
 
-    // Tacked paper — BlockItem is registered so it exists in the registry,
-    // but placement is handled by PaperPlacementHandler (right-click vanilla paper).
-    // Players don't obtain this item directly; it's internal to the block.
-    public static final DeferredItem<BlockItem> TACKED_PAPER =
-        ITEMS.registerSimpleBlockItem(GeneralBlocks.TACKED_PAPER);
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

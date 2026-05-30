@@ -35,3 +35,8 @@
 /gamemode creative
 /weather clear
 /setblock ~ ~ ~ artisticexpression:tacked_paper
+/time set midnight
+/reload
+/time set noon
+/time set midnight
+/time set noon

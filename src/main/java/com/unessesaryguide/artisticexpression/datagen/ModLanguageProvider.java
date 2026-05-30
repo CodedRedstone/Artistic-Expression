@@ -29,7 +29,7 @@ public class ModLanguageProvider extends LanguageProvider {
         add("block." + ArtisticExpression.MODID + ".giant_candle", "Giant Candle");
         add("block." + ArtisticExpression.MODID + ".tacked_paper", "Tacked Paper");
 
-        addColoredItems("giant_candle", GeneralItems.COLORED_GIANT_CANDLE);
+        addColoredBlocks("giant_candle", GeneralItems.COLORED_GIANT_CANDLE);
         addColoredItems("shaved_fleece", GeneralItems.SHAVED_FLEECE);
     }
 
@@ -49,6 +49,26 @@ public class ModLanguageProvider extends LanguageProvider {
             }
 
             String translationKey = "item." + ArtisticExpression.MODID + "." + color.getName() + "_" + baseName;
+            add(translationKey, formatName(color.getName()) + " " + formatName(baseName));
+        }
+    }
+
+    private <T extends Item> void addColoredBlocks(
+        String baseName,
+        Map<DyeColor, DeferredItem<T>> itemMap) {
+
+        LOGGER.info("[Artistic Expression] Adding lang entries for '{}'", baseName);
+
+        for (DyeColor color : DyeColor.values()) {
+            DeferredItem<T> item = itemMap.get(color);
+
+            if (item == null) {
+                LOGGER.warn("[Artistic Expression] Missing lang for color '{}' with base name '{}'",
+                    color.getName(), baseName);
+                continue;
+            }
+
+            String translationKey = "block." + ArtisticExpression.MODID + "." + color.getName() + "_" + baseName;
             add(translationKey, formatName(color.getName()) + " " + formatName(baseName));
         }
     }

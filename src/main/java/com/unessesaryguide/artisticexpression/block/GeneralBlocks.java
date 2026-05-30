@@ -31,10 +31,6 @@ public class GeneralBlocks {
     public static final Map<DyeColor, DeferredBlock<GiantCandleBlock>> COLORED_GIANT_CANDLE =
         new EnumMap<>(DyeColor.class);
 
-    // Tacked paper
-    public static final DeferredBlock<TackedPaperBlock> TACKED_PAPER =
-        BLOCKS.register("tacked_paper", TackedPaperBlock::new);
-
     static {
         for (DyeColor color : DyeColor.values()) {
             COLORED_GIANT_CANDLE.put(color, BLOCKS.register(

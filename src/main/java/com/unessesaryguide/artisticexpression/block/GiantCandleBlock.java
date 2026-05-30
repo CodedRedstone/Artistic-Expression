@@ -85,7 +85,6 @@ public class GiantCandleBlock extends Block {
         }
     }
 
-    @Override
     public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos,
                                             Player player, BlockHitResult hit) {
         BlockPos topPos = getTopCandle(level, pos);
@@ -114,7 +113,15 @@ public class GiantCandleBlock extends Block {
             return topState.useItemOn(stack, level, player, hand, hit.withPosition(topPos));
         }
 
-        if (!state.getValue(LIT) && stack.is(Items.FLINT_AND_STEEL)) {
+        // Extinguish with any item if lit
+        if (state.getValue(LIT)) {
+            level.setBlock(pos, state.setValue(LIT, false), 3);
+            level.playSound(null, pos, SoundEvents.CANDLE_EXTINGUISH, SoundSource.BLOCKS, 1.0f, 1.0f);
+            return ItemInteractionResult.SUCCESS;
+        }
+
+        // Light with flint and steel if unlit
+        if (stack.is(Items.FLINT_AND_STEEL)) {
             level.setBlock(pos, state.setValue(LIT, true), 3);
             level.playSound(null, pos, SoundEvents.FLINTANDSTEEL_USE, SoundSource.BLOCKS, 1.0f, 1.0f);
             stack.hurtAndBreak(1, player, player.getUsedItemHand() == InteractionHand.MAIN_HAND
@@ -122,6 +129,7 @@ public class GiantCandleBlock extends Block {
                 : net.minecraft.world.entity.EquipmentSlot.OFFHAND);
             return ItemInteractionResult.SUCCESS;
         }
+
         return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
     }
 }
